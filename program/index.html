@@ -8,6 +8,22 @@
     <script type="text/javascript" async
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=default">
     </script>
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    }
+    </script>
     <meta name="description" content="Conference Template">
     <meta name="resource-type" content="document">
     <meta name="distribution" content="global">
@@ -16,7 +32,6 @@
 </head>
 
 <body>
-
     <div class="banner">
         <img src="assets/JWST_SMACS.png" alt="Conference Template Banner">
         <div class="top-left">
@@ -46,7 +61,6 @@
             </td>
         </tr>
     </table>
-
     <h2>Conference Program</h2>
     <p>
     The two day workshop will run on the 11th and 12th January.<br>
@@ -58,7 +72,158 @@
     <p>
     In person participation is strongly encouraged, however a zoom link is available in extenuating circumstances.
     </p>
-
+    <!--
+    <table>
+        <tr>
+            <td class="date" rowspan="2">
+                8:30am
+            </td>
+            <td class="title-special">
+                Snacks!
+            </td>
+        </tr>
+        <tr>
+            <td class="abstract">
+                this is an abstract haha
+            </td>
+        </tr>
+    </table>
+    
+    <table id="Test1">
+        <tr>
+            <td class="date" rowspan="3">
+                9:00am
+            </td>
+            <td class="title">
+                Testtitle1
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+                Test1name (DTU/DAWN)
+            </td>
+        </tr>
+            <td class="abstract">
+            <div>
+            <button type="button" class="collapsible">Abstract</button>
+            <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sapien lorem, sodales quis enim in, tristique fermentum nisi. Vestibulum consequat quis orci eget vehicula. Morbi in cursus quam. Fusce imperdiet consectetur erat, nec efficitur ex vehicula ac. Nulla vel ex elit. Duis nec turpis tortor. Suspendisse fringilla orci eu rutrum euismod. Phasellus quis dolor at leo gravida lobortis sit amet id tortor. Donec eu dapibus turpis, ac dapibus mauris. Quisque vestibulum justo nunc, sed lobortis justo faucibus eget. Integer at dui in ex vulputate interdum in vel sapien. Vivamus semper lectus non erat consequat, ac placerat est commodo. Maecenas nulla leo, mattis blandit elementum tempus, tristique vitae tortor. Vestibulum vulputate, turpis vel fringilla luctus, diam nisi aliquet justo, quis commodo massa velit nec nulla.
+            </div>
+            </div>
+            </td>
+        </tr>
+    </table>
+    
+    <table id="Test1">
+        <tr>
+            <td class="date" rowspan="3">
+                9:00am
+            </td>
+            <td class="title">
+                Testtitle1
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+                Test1name (DTU/DAWN)
+            </td>
+        </tr>
+            <td class="abstract">
+                <button type="button" class="collapsible">Abstract</button>
+                <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sapien lorem, sodales quis enim in, tristique fermentum nisi. Vestibulum consequat quis orci eget vehicula. Morbi in cursus quam. Fusce imperdiet consectetur erat, nec efficitur ex vehicula ac. Nulla vel ex elit. Duis nec turpis tortor. Suspendisse fringilla orci eu rutrum euismod. Phasellus quis dolor at leo gravida lobortis sit amet id tortor. Donec eu dapibus turpis, ac dapibus mauris. Quisque vestibulum justo nunc, sed lobortis justo faucibus eget. Integer at dui in ex vulputate interdum in vel sapien. Vivamus semper lectus non erat consequat, ac placerat est commodo. Maecenas nulla leo, mattis blandit elementum tempus, tristique vitae tortor. Vestibulum vulputate, turpis vel fringilla luctus, diam nisi aliquet justo, quis commodo massa velit nec nulla.
+            </div>
+            </div>
+        </td>
+        </tr>
+    </table>
+    <table id="Test2">
+        <tr>
+            <td class="date" rowspan="3">
+                9:30am
+            </td>
+            <td class="title">
+                Testtitle2
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+                Test2name (Chalmers)
+            </td>
+        </tr>
+            <td class="abstract">
+                <button type="button" class="collapsible">Abstract</button>
+                <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sapien lorem, sodales quis enim in, tristique fermentum nisi. Vestibulum consequat quis orci eget vehicula. Morbi in cursus quam. Fusce imperdiet consectetur erat, nec efficitur ex vehicula ac. Nulla vel ex elit. Duis nec turpis tortor. Suspendisse fringilla orci eu rutrum euismod. Phasellus quis dolor at leo gravida lobortis sit amet id tortor. Donec eu dapibus turpis, ac dapibus mauris. Quisque vestibulum justo nunc, sed lobortis justo faucibus eget. Integer at dui in ex vulputate interdum in vel sapien. Vivamus semper lectus non erat consequat, ac placerat est commodo. Maecenas nulla leo, mattis blandit elementum tempus, tristique vitae tortor. Vestibulum vulputate, turpis vel fringilla luctus, diam nisi aliquet justo, quis commodo massa velit nec nulla.
+            </div>
+            </div>
+        </td>
+        </tr>
+    </table>
+    <table id="Test3">
+        <tr>
+            <td class="date" rowspan="3">
+                10:00am
+            </td>
+            <td class="title">
+                Testtitle3
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+                Test3name (KU/DAWN)
+            </td>
+        </tr>
+            <td class="abstract">
+                <button type="button" class="collapsible">Abstract</button>
+                <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sapien lorem, sodales quis enim in, tristique fermentum nisi. Vestibulum consequat quis orci eget vehicula. Morbi in cursus quam. Fusce imperdiet consectetur erat, nec efficitur ex vehicula ac. Nulla vel ex elit. Duis nec turpis tortor. Suspendisse fringilla orci eu rutrum euismod. Phasellus quis dolor at leo gravida lobortis sit amet id tortor. Donec eu dapibus turpis, ac dapibus mauris. Quisque vestibulum justo nunc, sed lobortis justo faucibus eget. Integer at dui in ex vulputate interdum in vel sapien. Vivamus semper lectus non erat consequat, ac placerat est commodo. Maecenas nulla leo, mattis blandit elementum tempus, tristique vitae tortor. Vestibulum vulputate, turpis vel fringilla luctus, diam nisi aliquet justo, quis commodo massa velit nec nulla.
+            </div>
+            </div>
+        </td>
+        </tr>
+    </table>
+    -->
+    <!--
+    <table id="Test2">
+        <tr>
+            <td class="date" rowspan="3">
+                9:30am
+            </td>
+            <td class="title">
+                Testtitle2
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+                Test2name (Chalmers)
+            </td>
+        </tr>
+            <td class="abstract">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sapien lorem, sodales quis enim in, tristique fermentum nisi. Vestibulum consequat quis orci eget vehicula. Morbi in cursus quam. Fusce imperdiet consectetur erat, nec efficitur ex vehicula ac. Nulla vel ex elit. Duis nec turpis tortor. Suspendisse fringilla orci eu rutrum euismod. Phasellus quis dolor at leo gravida lobortis sit amet id tortor. Donec eu dapibus turpis, ac dapibus mauris. Quisque vestibulum justo nunc, sed lobortis justo faucibus eget. Integer at dui in ex vulputate interdum in vel sapien. Vivamus semper lectus non erat consequat, ac placerat est commodo. Maecenas nulla leo, mattis blandit elementum tempus, tristique vitae tortor. Vestibulum vulputate, turpis vel fringilla luctus, diam nisi aliquet justo, quis commodo massa velit nec nulla.
+            </td>
+        </tr>
+    </table>
+    <table id="Test3">
+        <tr>
+            <td class="date" rowspan="3">
+                10:00am
+            </td>
+            <td class="title">
+                Testtitle3
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+                Test3name (KU/DAWN)
+            </td>
+        </tr>
+            <td class="abstract">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sapien lorem, sodales quis enim in, tristique fermentum nisi. Vestibulum consequat quis orci eget vehicula. Morbi in cursus quam. Fusce imperdiet consectetur erat, nec efficitur ex vehicula ac. Nulla vel ex elit. Duis nec turpis tortor. Suspendisse fringilla orci eu rutrum euismod. Phasellus quis dolor at leo gravida lobortis sit amet id tortor. Donec eu dapibus turpis, ac dapibus mauris. Quisque vestibulum justo nunc, sed lobortis justo faucibus eget. Integer at dui in ex vulputate interdum in vel sapien. Vivamus semper lectus non erat consequat, ac placerat est commodo. Maecenas nulla leo, mattis blandit elementum tempus, tristique vitae tortor. Vestibulum vulputate, turpis vel fringilla luctus, diam nisi aliquet justo, quis commodo massa velit nec nulla.
+            </td>
+        </tr>
+    </table>
+    -->
     <!---
     <table>
         <tr>
@@ -347,7 +512,22 @@
         &copy; D-LOCKS
         &nbsp;|&nbsp; Design by <a href="https://github.com/mikepierce">Mike Pierce</a>
     </footer>
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
 
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    }
+    </script>
 </body>
 </html>
 
